@@ -15,12 +15,6 @@ import { selectCurrentUser } from './redux/user/user.selectors';
 
 import './App.css';
 
-const HatsPage = () => (
-  <div>
-    <h1>HATS PAGE</h1>
-  </div>
-);
-
 class App extends React.Component {
   unsubscribeFromAuth = null;
   
@@ -59,7 +53,6 @@ class App extends React.Component {
         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route path='/shop' component={ShopPage} />
-          <Route path='/shop/hats' component={HatsPage} />
           <Route exact path='/checkout' component={CheckoutPage} />
           <Route exact path='/signin' render={() => 
             this.props.currentUser ? 

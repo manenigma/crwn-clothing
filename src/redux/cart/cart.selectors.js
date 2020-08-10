@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect';
 
-const selectCart = state => state.cart;
+const selectCart = state => state.cart; //input selector
 
 export const selectCartItems = createSelector(
     [selectCart],
