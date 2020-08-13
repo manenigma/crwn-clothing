@@ -27,7 +27,7 @@ const CollectionItem = ({ item, addItem }) => {
 )}
 
 const mapDispatchToProps = (dispatch) => ({
-    addItem: (item) => dispatch(addItem(item)) // dispatch func will be add to a store in redux flow.
+    addItem: (item) => dispatch(addItem(item))
 })
 
 export default connect(

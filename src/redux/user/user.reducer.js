@@ -16,4 +16,4 @@ const userReducer = (state = INITIAL_STATE, action) => {
     }
 }
 
-export default userReducer; // use into root-reducer.js
+export default userReducer;

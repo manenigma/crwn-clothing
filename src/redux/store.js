@@ -10,4 +10,4 @@ const store = createStore(rootReducer, applyMiddleware(...middleware));
 
 const persistor = persistStore(store);
 
-export { store, persistor }; // use into index.js
+export { store, persistor };

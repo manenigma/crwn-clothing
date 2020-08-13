@@ -12,7 +12,7 @@ import { selectCartHidden } from '../../redux/cart/cart.selectors';
 
 import './header.styles.scss';
 
-const Header = ({ currentUser, hidden }) => ( // this come from reducer on redux process
+const Header = ({ currentUser, hidden }) => (
     <div className='header'>
         <Link className='logo-container' to="/">
             <Logo className='logo' />

@@ -13,20 +13,16 @@ const config = {
     measurementId: "G-1NPNNF7W6F"
   };
 
-  export const createUserProfileDocument = async (userAuth, additionalData) => { // use in App.js
+  export const createUserProfileDocument = async (userAuth, additionalData) => {
     if (!userAuth) return;
-    // console.log('userAuth ', userAuth);
     const userRef = firestore.doc(`users/${userAuth.uid}`);
     const snapShot = await userRef.get();
-    // console.log('userRef ', userRef);
-    // console.log('snapShot ', snapShot);
-    // console.log('snapShot.exists ', snapShot.exists);
 
     if(!snapShot.exists) {
       const { displayName, email } = userAuth;
       const createdAt = new Date();
 
-      try { // store in firebase Database
+      try { 
         await userRef.set({
           displayName,
           email,
@@ -43,11 +39,11 @@ const config = {
 
   firebase.initializeApp(config);
 
-  export const auth = firebase.auth(); // use in App.js and header.component.jsx
+  export const auth = firebase.auth(); 
   export const firestore = firebase.firestore();
 
 const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({ prompt: 'select_account' });
-export const signInWithGoogle = () => auth.signInWithPopup(provider); // use in sign-in.component.jsx
+export const signInWithGoogle = () => auth.signInWithPopup(provider); 
 
 export default firebase;

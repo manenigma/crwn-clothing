@@ -11,7 +11,6 @@ import { toggleCartHidden } from '../../redux/cart/cart.actions';
 import './cart-dropdown.styles.scss';
 
 const CartDropdown = ({ cartItems, history, dispatch }) => {
-    // console.log(otherProps);
     return (
     <div className="cart-dropdown">
         <div className="cart-items">
@@ -36,4 +35,4 @@ const mapStateToProps = createStructuredSelector({
     cartItems: selectCartItems
 });
 
-export default withRouter(connect(mapStateToProps)(CartDropdown)); //  withRouter can help me to accese history, location, match props on Router
+export default withRouter(connect(mapStateToProps)(CartDropdown));
