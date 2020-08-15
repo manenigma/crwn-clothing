@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom'
+import { Route } from 'react-router-dom';
 
 import CollectionOverview from '../../components/collections-overview/conllection-overview.component';
 import CollectionPage from '../collection/collection.component';
