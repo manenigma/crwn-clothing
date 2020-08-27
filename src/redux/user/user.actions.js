@@ -24,7 +24,7 @@ export const signInFailure = (error) => ({
     payload: error
 });
 
-export const checkkUserSession = () => ({
+export const checkUserSession = () => ({
     type: UserActionType.CHECK_USER_SESSION
 });
 
